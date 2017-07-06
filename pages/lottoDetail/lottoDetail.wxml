@@ -1,1 +1,1 @@
-<view>detail</view>
+<view>detailID:<label >{{id}}</label></view>

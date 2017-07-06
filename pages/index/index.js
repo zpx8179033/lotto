@@ -25,11 +25,18 @@ Page({
       url: '../logs/logs',
     })
   },
-  toDetailPage:function(){
-    console.log(this)
+  toDetailPage:function(e){
+    var id = e.currentTarget.dataset.id;
+    console.log(e);
     wx.navigateTo({
-      url: '../lottoDetail/lottoDetail',
+      url: '../lottoDetail/lottoDetail?id='+id,
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '万里挑一',
+      path: '/index/index'
+    }
   },
   onLoad: function () {
     console.log('onLoad')

@@ -3,10 +3,14 @@
   当前夺宝列表
  </view>
 <view class="ul">
-  <view class="li" wx:for="{{lottoList}}" bindtouchstart="toDetailPage">
-    <image src="{{item.image}}"></image>
+  <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}"bindtouchstart="toDetailPage">
+  <view class="top-half">
+   <image src="{{item.image}}"></image>
     <text class="name">{{item.name}}</text>
     <text class="price">京东零售价：{{item.price}}元</text>
-    <view></view>
+  </view>
+  <view class="bottom-half">
+    <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
+  </view>
   </view>
 </view>
