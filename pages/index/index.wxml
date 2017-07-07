@@ -1,7 +1,4 @@
 <!--index.wxml-->
- <view class="">
-  当前夺宝列表
- </view>
 <view class="ul">
   <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}"bindtouchstart="toDetailPage">
   <view class="top-half">
