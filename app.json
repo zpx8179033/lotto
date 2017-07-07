@@ -18,18 +18,18 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "夺宝\n列表",
-        "iconPath": ""
+        "text": "夺宝\n列表"
+        
       },
       {
         "pagePath": "pages/toLotto/toLotto",
-        "text": "发起\n夺宝",
-        "iconPath": ""
+        "text": "发起\n夺宝"
+        
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "个人\n中心",
-        "iconPath": ""
+        "text": "个人\n中心"
+    
       }
     ]
   }

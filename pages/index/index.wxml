@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="ul">
-  <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}"bindtouchstart="toDetailPage">
+  <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
   <view class="top-half">
    <image src="{{item.image}}"></image>
     <text class="name">{{item.name}}</text>
