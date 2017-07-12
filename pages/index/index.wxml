@@ -1,13 +1,41 @@
 <!--index.wxml-->
-<view class="ul">
-  <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
-  <view class="top-half">
-   <image src="{{item.image}}"></image>
-    <text class="name">{{item.name}}</text>
-    <text class="price">京东零售价：{{item.price}}元</text>
-  </view>
-  <view class="bottom-half">
-    <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
-  </view>
+<view class="head">
+  <view class="head-item" wx:key="id" wx:for="{{menus}}" data-id="{{item.id}}" bindtap="toggleMenu">
+    <span>{{item.name}}</span>
+    <view class="mark" wx:if="{{item.id==currentIndex}}"></view>
   </view>
 </view>
+<swiper indicator-dots="false" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
+  <swiper-item>
+    <view class="ul">
+      <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
+      <view class="top-half">
+      <image src="{{item.image}}"></image>
+        <text class="name">{{item.name}}</text>
+        <text class="price">京东零售价：{{item.price}}元</text>
+      </view>
+      <view class="bottom-half">
+        <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
+      </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="ul">
+        <view class="li" wx:key="id"  wx:for="{{lastLottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
+        <view class="top-half">
+        <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half">
+          <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
+        </view>
+        </view>
+      </view>
+  </swiper-item>
+  <swiper-item>
+      说明文档
+  </swiper-item>
+</swiper>
+
