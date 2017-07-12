@@ -19,20 +19,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "万宝项目",
-        "iconPath": "Pages/images/user.png",
-        "selectedIconPath": "Pages/images/selectedUser.png"
+        "iconPath": "pages/images/user.png",
+        "selectedIconPath": "pages/images/selectedUser.png"
       },
       {
         "pagePath": "pages/toLotto/toLotto",
         "text": "我的项目",
-        "iconPath": "Pages/images/project.png",
-        "selectedIconPath": "Pages/images/selectedProject.png"
+        "iconPath": "pages/images/project.png",
+        "selectedIconPath": "pages/images/selectedProject.png"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "我的资产",
-        "iconPath": "Pages/images/asset.png",
-        "selectedIconPath": "Pages/images/selectedAsset.png"
+        "iconPath": "pages/images/asset.png",
+        "selectedIconPath": "pages/images/selectedAsset.png"
       }
     ]
   }
