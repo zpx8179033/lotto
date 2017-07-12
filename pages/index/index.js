@@ -8,6 +8,9 @@ for(var i=0;i<10;i++){
   o.totalCopies=3200;
   o.currentCopies=1234;
   o.image ='http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
+  o.avatarUrl = '';
+  o.nickName = '';
+  o.unitPrice = 1;
   lottoList.push(o);
 }
 var lastLottoList = []
@@ -19,6 +22,9 @@ for (var i = 0; i < 2; i++) {
   o.totalCopies = 3200;
   o.currentCopies = 3199;
   o.image = 'http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
+  o.avatarUrl = '';
+  o.nickName='';
+  o.unitPrice=1;
   lastLottoList.push(o);
 }
 
@@ -80,10 +86,27 @@ Page({
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
+      
+      var lottoListTemp=lottoList.map(function(item){
+        var temp=item;
+        item.avatarUrl = userInfo.avatarUrl;
+        item.nickName = userInfo.nickName;   
+        return item;     
+      })
+      var lastLottoListTemp = lastLottoList.map(function (item) {
+        var temp = item;
+        item.avatarUrl = userInfo.avatarUrl;
+        item.nickName = userInfo.nickName;
+        return item;
+      })
+
       //更新数据
       that.setData({
-        userInfo:userInfo
+        userInfo: userInfo,
+        lottoList: lottoListTemp,
+        lastLottoList: lastLottoListTemp
       })
+      console.log(userInfo);
     })
   }
 })

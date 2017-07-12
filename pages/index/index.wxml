@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="head">
-  <view class="head-item" wx:key="id" wx:for="{{menus}}" data-id="{{item.id}}" bindtap="toggleMenu">
+  <view class="head-item" wx:for="{{menus}}" wx:key="id"  data-id="{{item.id}}" bindtap="toggleMenu">
     <span>{{item.name}}</span>
     <view class="mark" wx:if="{{item.id==currentIndex}}"></view>
   </view>
@@ -8,31 +8,43 @@
 <swiper indicator-dots="{{false}}" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
   <swiper-item>
     <view class="ul" scroll-y="true">
-      <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
-      <view class="top-half">
-      <image src="{{item.image}}"></image>
-        <text class="name">{{item.name}}</text>
-        <text class="price">京东零售价：{{item.price}}元</text>
-      </view>
-      <view class="bottom-half">
-        <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
-      </view>
-      </view>
-    </view>
-  </swiper-item>
-  <swiper-item>
-    <view class="ul">
-        <view class="li" wx:key="id"  wx:for="{{lastLottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
+      <view class="li" wx:for="{{lottoList}}" wx:key="id" data-id="{{item.id}}" bindtap="toDetailPage">
         <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half">
         <image src="{{item.image}}"></image>
           <text class="name">{{item.name}}</text>
           <text class="price">京东零售价：{{item.price}}元</text>
         </view>
         <view class="bottom-half">
-          <text>进度：{{item.currentCopies}}/{{item.totalCopies}}</text>
-        </view>
+          <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
+          <button class="right">购买</button>
         </view>
       </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view class="ul" scroll-y="true">
+      <view class="li" wx:for="{{lastLottoList}}" wx:key="id" data-id="{{item.id}}" bindtap="toDetailPage">
+        <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half">
+        <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half">
+          <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
+          <button class="right">购买</button>
+        </view>
+      </view>
+    </view>
   </swiper-item>
   <swiper-item>
       <view class="ul">说明文档
