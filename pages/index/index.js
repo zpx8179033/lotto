@@ -55,7 +55,7 @@ Page({
   },
   toggleMenu:function(e){
     var currentIndex = 0;
-    if (e.detail){
+    if (e.detail&&(e.detail.current||e.detail.current==0)){
       currentIndex = e.detail.current;
     }else{
       currentIndex=e.currentTarget.dataset.id;

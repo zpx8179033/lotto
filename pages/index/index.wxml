@@ -5,9 +5,9 @@
     <view class="mark" wx:if="{{item.id==currentIndex}}"></view>
   </view>
 </view>
-<swiper indicator-dots="false" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
+<swiper indicator-dots="{{false}}" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
   <swiper-item>
-    <view class="ul">
+    <view class="ul" scroll-y="true">
       <view class="li" wx:key="id"  wx:for="{{lottoList}}" data-id="{{item.id}}" bindtap="toDetailPage">
       <view class="top-half">
       <image src="{{item.image}}"></image>
@@ -35,7 +35,8 @@
       </view>
   </swiper-item>
   <swiper-item>
-      说明文档
+      <view class="ul">说明文档
+      </view>
   </swiper-item>
 </swiper>
 
