@@ -12,21 +12,22 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor": "#fffff",
-    "selectedColor": "green",
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#4A90E2",
+    "color":"#B2B2B2",
     "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "万宝项目",
-        "iconPath": "pages/images/user.png",
-        "selectedIconPath": "pages/images/selectedUser.png"
+        "iconPath": "pages/images/allProject.png",
+        "selectedIconPath": "pages/images/selectedAllProject.png"
       },
       {
         "pagePath": "pages/toLotto/toLotto",
         "text": "我的项目",
-        "iconPath": "pages/images/project.png",
-        "selectedIconPath": "pages/images/selectedProject.png"
+        "iconPath": "pages/images/myProject.png",
+        "selectedIconPath": "pages/images/selectedMyProject.png"
       },
       {
         "pagePath": "pages/logs/logs",
