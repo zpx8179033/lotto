@@ -81,6 +81,13 @@ Page({
       path: '/index/index'
     }
   },
+  toBuy:function(e){
+    var id = e.currentTarget.dataset.id;
+    wx.showToast({
+      title: '购买失败',
+      icon: id
+    });
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

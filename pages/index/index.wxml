@@ -21,7 +21,7 @@
         </view>
         <view class="bottom-half">
           <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
-          <button class="right">购买</button>
+          <button class="right" catchtap="toBuy">购买</button>
         </view>
       </view>
     </view>
@@ -41,7 +41,7 @@
         </view>
         <view class="bottom-half">
           <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
-          <button class="right">购买</button>
+          <button class="right" catchtap="toBuy">购买</button>
         </view>
       </view>
     </view>
