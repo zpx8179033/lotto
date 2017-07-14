@@ -32,6 +32,20 @@ for (var i = 0; i < 2; i++) {
   awardList.push(o);
 }
 
+var noAwardList = []
+for (var i = 0; i < 2; i++) {
+  var o = {};
+  o.id = i;
+  o.name = '小米4';
+  o.price = 3000;
+  o.awardNumber = 456;
+  o.image = 'http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
+  o.avatarUrl = '';
+  o.nickName = '';
+  o.unitPrice = 1;
+  noAwardList.push(o);
+}
+
 var menus = [{
   id: 0,
   name: '进行中',
@@ -99,6 +113,13 @@ Page({
       icon: id
     });
   },
+  toCheck:function (e) {
+    var id = e.currentTarget.dataset.id;
+    wx.showToast({
+      title: '去查看' + id,
+      icon: id
+    });
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -117,12 +138,19 @@ Page({
         item.nickName = userInfo.nickName;
         return item;
       })
-
+      var noAwardListTemp = noAwardList.map(function (item) {
+        var temp = item;
+        item.avatarUrl = userInfo.avatarUrl;
+        item.nickName = userInfo.nickName;
+        return item;
+      })
+      
       //更新数据
       that.setData({
         userInfo: userInfo,
         progressList: progressListTemp,
-        awardList: awardListTemp
+        awardList: awardListTemp,
+        noAwardList: noAwardListTemp
       })
       console.log(userInfo);
     })

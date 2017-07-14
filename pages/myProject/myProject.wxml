@@ -48,8 +48,24 @@
     </view>
   </swiper-item>
   <swiper-item>
-      <view class="ul">说明文档
+      <view class="ul" scroll-y="true">
+      <view class="li" wx:for="{{noAwardList}}" wx:key="id">
+        <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half" data-id="{{item.id}}" catchtap="toDetailPage">
+        <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half">
+          <text class="left">中奖号码：{{item.awardNumber}}</text>
+          <button class="right" data-id="{{item.id}}" catchtap="toCheck">查看</button>          
+        </view>
       </view>
+    </view>
   </swiper-item>
 </swiper>
 
