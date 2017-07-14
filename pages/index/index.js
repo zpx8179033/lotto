@@ -30,7 +30,7 @@ for (var i = 0; i < 2; i++) {
 
 var menus=[{
     id:0,
-    name:'万里挑一',
+    name:'万里广场',
     isSelected:false
   }, {
     id: 1,
