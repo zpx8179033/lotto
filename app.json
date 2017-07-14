@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/lottoDetail/lottoDetail",
-    "pages/toLotto/toLotto"
+    "pages/toLotto/toLotto",
+    "pages/myProject/myProject"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,7 +25,7 @@
         "selectedIconPath": "pages/images/selectedAllProject.png"
       },
       {
-        "pagePath": "pages/toLotto/toLotto",
+        "pagePath": "pages/myProject/myProject",
         "text": "我的项目",
         "iconPath": "pages/images/myProject.png",
         "selectedIconPath": "pages/images/selectedMyProject.png"

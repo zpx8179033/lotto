@@ -8,7 +8,7 @@
 <swiper indicator-dots="{{false}}" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
   <swiper-item>
     <view class="ul" scroll-y="true">
-      <view class="li" wx:for="{{lottoList}}" wx:key="id">
+      <view class="li" wx:for="{{progressList}}" wx:key="id">
         <view class="top-half">
           <image class="head-img" src="{{item.avatarUrl}}"></image>
           <text class="name">{{item.nickName}}</text>
@@ -21,27 +21,28 @@
         </view>
         <view class="bottom-half">
           <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
-          <button class="right" data-id="{{item.id}}" catchtap="toBuy">购买</button>
+          <button class="right"  data-id="{{item.id}}" catchtap="toBuy">购买</button>
         </view>
       </view>
     </view>
   </swiper-item>
   <swiper-item>
    <view class="ul" scroll-y="true">
-      <view class="li" wx:for="{{lastLottoList}}" wx:key="id">
+      <view class="li" wx:for="{{awardList}}" wx:key="id">
         <view class="top-half">
           <image class="head-img" src="{{item.avatarUrl}}"></image>
           <text class="name">{{item.nickName}}</text>
           <text class="unit-price">{{item.unitPrice}}元/份</text>
         </view>
-        <view class="middle-half" data-id="{{item.id}}" bindtap="toDetailPage">
+        <view class="middle-half" data-id="{{item.id}}" catchtap="toDetailPage">
         <image src="{{item.image}}"></image>
           <text class="name">{{item.name}}</text>
           <text class="price">京东零售价：{{item.price}}元</text>
         </view>
         <view class="bottom-half">
-          <text class="left">进度：{{item.currentCopies}}/{{item.totalCopies}}份</text>
-          <button class="right" data-id="{{item.id}}" catchtap="toBuy">购买</button>
+          <text class="left">中奖号码：{{item.awardNumber}}</text>
+          <button class="right" data-id="{{item.id}}" wx:if="{{!item.isAward}}" catchtap="toAward">领奖</button>
+          <button class="right2" wx:if="{{item.isAward}}">已领</button>          
         </view>
       </view>
     </view>
