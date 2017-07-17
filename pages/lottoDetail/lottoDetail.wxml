@@ -1,1 +1,80 @@
-<view>detailID:<label >{{id}}</label></view>
+<!-- <view>detailID:<label >{{id}}</label></view> -->
+<view class="detailBox">
+<view class="detail-head">
+  <view class="head" wx:key="id" wx:for="{{detailmeun}}" data-id="{{item.id}}" bindtap="detailSwitch">
+    <span class="menu">{{item.name}}</span>
+    <view class="mark" wx:if="{{item.id==currentIndex}}"></view>
+  </view>
+</view>
+<swiper class="content" current="{{currentIndex}}" bindchange="detailSwitch">
+  <swiper-item class="one">
+      <view class="prizeInfo">
+          <image class="prizeImg" src="{{prizeInfo.img}}"></image>
+          <view class="prizeName">{{prizeInfo.title}}</view>
+          <view class="prizePrice">京东价：¥{{prizeInfo.price}}</view>
+          <view class="prizeLabel">京东直购</view>
+      </view>
+      <view class="prizeProgress">
+        <view class="title"><span class="strong">进度</span>
+          <view class="titleRight">剩余<span class="font20">200</span>份可买</view>
+        </view>
+      </view>
+      <view class="prizeProgress prizePoint">
+        <view class="title strong" style="background:#fff;">特点</view>
+        <view class="tedian">关联时时彩-重庆彩票，5分钟一次，公平公正</view>
+      </view>
+      <view class="myJoin">
+        <view class="title join"><span class="strong">我参与的</span>
+          <view class="titleRight">已购<span class="font20">{{myJoin.count}}</span>份</view>
+        </view>
+        <ul class="joinList">
+          <li class="listInfo color888" wx:key="code" wx:for="{{myJoin.list}}">
+            <span class="time">{{item.time}}</span>
+            <span class="code">奖品码：{{item.code}}</span>
+          </li>
+          
+        </ul>
+      </view>
+
+      
+  </swiper-item>
+  <swiper-item class="two">
+  <!-- 开奖进度 -->
+    <view class="lotteryProgress">
+      <view class="title join"><span class="strong">开奖进度</span></view>
+      <view class="lotteryType">
+        <span class="type">2017-7-17 15:11:04</span>
+        <span class="name">夺宝开始</span>
+      </view>
+    </view>
+    <view class="bar"></view>
+    <!--关联彩票  -->
+    <view class="title join"><span class="strong">关联彩票</span></view>
+    <view class="lotteryType">
+      <span class="type">彩票种类</span>
+      <span class="name">时时彩-重庆</span>
+    </view>
+    <view class="lotteryType lotteryType2">
+      <span class="type">彩票期数</span>
+      <span class="name">夺宝结束后自动关联下一期</span>
+    </view>
+    <view class="bar"></view>
+    <view class="allJoin">
+        <view class="title join"><span class="strong">参与公示</span>
+          <view class="titleRight" style="right:3%">累计参与<span>3200</span>人份</view>
+        </view>
+        <ul class="allJoinList">
+          <li class="allListInfo">
+            <view class="left">w</view>
+            <view class="right">w</view>
+          </li>
+          
+        </ul>
+      </view>
+  </swiper-item>
+  <swiper-item class="three"></swiper-item>
+  <swiper-item class="four"></swiper-item>
+  <swiper-item class="five"></swiper-item>
+  <button class="buyNow" type="primary">现在购买</button>
+</swiper>
+</view>

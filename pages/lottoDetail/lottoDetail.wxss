@@ -1,0 +1,219 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+.detailBox{
+  width: 100%;
+  height: auto;
+}
+.font20{
+  font-size:20px;
+}
+.strong{
+  font-weight: 900;
+}
+.color888{
+  color: #888;
+}
+.detail-head{
+  width: 100%;
+  height: 44px;
+  margin-bottom: 8px;
+  display: flex;
+  background: #fff;
+}
+.head{
+  color: #888;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.mark{
+  width: 80%;
+  height: 4px;
+  background: #1D75DD;
+  border-radius: 4px;
+  margin-left: 10%;
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top:48px;
+  bottom: 0;
+  height: auto;
+}
+swiper-item{
+  height: 260px;
+}
+.one{
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+/* .two{
+  background: palegreen
+} */
+.three{
+  background: paleturquoise
+}
+.four{
+  background: palevioletred
+}
+.five{
+  background: pink
+}
+.buyNow{
+  position: fixed;
+  bottom: 15px;
+  left: 5%;
+  width: 90%;
+}
+.prizeInfo{
+  width: 100%;
+  height: 156px;
+  background: url("http://i1.yongche.name/media/g2/M04/18/01/rBEBP1lnJUCITt_uAAACeHuBvpQAAJWKwP__W8AAAKR219.png")no-repeat 98% center #fff;
+  position: relative;
+}
+.prizeProgress{
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  margin: 10px 0;
+}
+.myJoin{
+  width: 100%;
+   background: #fff; 
+  margin-bottom: 80px;
+  position: relative;
+}
+.prizeImg{
+  width: 115px;
+  height: 115px;
+  position: absolute;
+  left: 10px;
+  top:20px;
+  background: yellowgreen;
+  overflow: hidden;
+}
+.prizeName{
+  position: absolute;
+  top:20px;
+  font-size: 20px;
+  left: 150px;
+}
+.prizePrice{
+  position: absolute;
+  top:64px;
+  left:150px;
+  color: #888;
+}
+.prizeLabel{
+  position: absolute;
+  top:110px;
+  left: 150px;
+}
+.title{
+  color: #888;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 14px;
+  position: relative;
+  background: url("http://i1.yongche.name/media/g2/M04/18/01/rBEBP1lnJUCITt_uAAACeHuBvpQAAJWKwP__W8AAAKR219.png")no-repeat 97% center #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+.titleRight{
+  position: absolute;
+  top:0;
+  right: 40px;
+}
+.tedian{
+  line-height: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: #888;
+}
+.myJoin{
+  width: 100%;
+  height: auto;
+}
+.join{
+  background: #fff;
+}
+.listInfo{
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-bottom:1px solid #f2f2f2;
+}
+ .listInfo .time{
+  display: block;
+  width: 60%;
+  margin-left: 4%;
+  float: left;
+
+}
+.listInfo .code{
+  display: block;
+  width: 33%;
+  float: right;
+}
+.lotteryType{
+  font-size: 14px;
+  color: #888;
+  background: #fff;
+  width:100%;
+  height: 50px;
+  padding-left: 14px;
+  line-height: 50px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lotteryType .type{
+  display: block;
+  width: 40%;
+  float: left;
+}
+.lotteryType .name{
+  display: block;
+  float: left;
+  width: 53%;
+  text-align: right;
+}
+.bar{
+  width: 100%;
+  height:11px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.allJoin{
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.allJoinList{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.allListInfo{
+  width: 100%;
+  height: 70px;
+  display: block;
+  border-bottom: 1px solid #f2f2f2;
+}
+.allListInfo .left{
+  height: 70px;
+  width: 50%;
+  float: left;
+  background: pink;
+}
+.allListInfo .right{
+  width: 50%;
+  height: 70px;
+  float: right;
+  background: yellow;
+}

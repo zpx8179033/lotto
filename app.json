@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/index/index",    
     "pages/myAsset/myAsset",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/lottoDetail/lottoDetail",
     "pages/toLotto/toLotto",
