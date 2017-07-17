@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/myAsset/myAsset",
     "pages/index/index",
     "pages/logs/logs",
     "pages/lottoDetail/lottoDetail",
@@ -15,7 +16,7 @@
   "tabBar": {
     "backgroundColor": "#FFFFFF",
     "selectedColor": "#4A90E2",
-    "color":"#B2B2B2",
+    "color": "#B2B2B2",
     "position": "bottom",
     "list": [
       {
@@ -31,7 +32,7 @@
         "selectedIconPath": "pages/images/selectedMyProject.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/myAsset/myAsset",
         "text": "我的资产",
         "iconPath": "pages/images/asset.png",
         "selectedIconPath": "pages/images/selectedAsset.png"

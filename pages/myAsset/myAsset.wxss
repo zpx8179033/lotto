@@ -1,0 +1,58 @@
+/* myAsset.wxss */
+.menus{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #F0F0F0;
+}
+.menu{
+  position: relative;
+  height:137px;
+  width:100%;
+  margin-bottom: 10px;
+}
+.menu .head{
+  height:40px;
+  width: 100%;
+  line-height:40px;
+  padding-left: 10px;
+  background:#ffffff;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.menu .head::after{
+  content: '>';
+}
+.menu .content{
+  display: flex;
+  justify-content:space-around;
+  height:95px;
+  width: 100%;
+  background:#ffffff;  
+}
+.menu .content .item{
+  height:100%;
+  width: 60px;
+  text-align: center;
+}
+.menu .content image{
+  border-radius:30px;
+}
+.menu .content .item .info{
+  display: block;
+  margin: 10px 0 5px 0;
+  width: 60px;
+  height:60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+.menu .content .item .title{
+  display: block;
+  width: 60px;
+  height:20px;
+  font-size:12px;
+  line-height: 20px;
+  color:#B2B2B2;
+}

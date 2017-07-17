@@ -1,0 +1,41 @@
+<!--myAsset.wxml-->
+
+<view class="menus">
+  <view class="menu">
+    <view class="head">object的家</view>
+    <view class="content">
+      <view class="item">
+        <image src="{{userInfo.avatarUrl}}" class="info"></image>
+        <view class="title">头像</view>        
+      </view>
+      <view class="item"></view>
+      <view class="item"></view>
+    </view>  
+  </view>
+  <view class="menu">
+    <view class="head">我的资产</view>
+    <view class="content">
+      <view class="item">
+        <view class="info">￥546.00</view> 
+        <view class="title">可用余额</view>        
+      </view>
+      <view class="item">
+        <view class="info">￥606.00</view> 
+        <view class="title">累积赚取</view>        
+      </view>
+    </view>  
+  </view>
+  <view class="menu">
+    <view class="head">我发起的梦想项目</view>
+    <view class="content">
+      <view class="item">
+        <view class="info">1个</view> 
+        <view class="title">进行中</view>        
+      </view>
+      <view class="item">
+        <view class="info">2个</view> 
+        <view class="title">已结束</view>        
+      </view>
+    </view>  
+  </view>
+</view>
