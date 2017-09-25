@@ -10,6 +10,16 @@ Page({
     userInfo:{}
   },
 
+  toLaunchProject: function (e) {
+    wx.navigateTo({
+      url: '../launchProject/launchProject',
+    })
+  },
+  toCreateProject:function(e){
+    wx.navigateTo({
+      url: '../createProject/createProject',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

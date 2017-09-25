@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",    
+    "pages/createProject/createProject",
+    "pages/launchProject/launchProject",
     "pages/myAsset/myAsset",
     "pages/logs/logs",
     "pages/lottoDetail/lottoDetail",

@@ -1,0 +1,125 @@
+/* launchProject.wxss */
+.head {
+  display: flex;
+  justify-content:space-around;
+  line-height: 40px;
+  width:100%;
+  height:40px;
+}
+.head .head-item{
+  position: relative;
+  text-align: center;
+  margin: 0px 20px;
+  height: 40px;
+  width: 33%;
+}
+.head .head-item .mark{
+  position: absolute;
+  bottom:0;
+  background-color:#1D75DD;
+  height:5px;
+  width: 100%;
+  border-radius: 2.5px;
+}
+.content{
+  position: absolute;
+  top:40px;
+  bottom: 0;
+  height:auto;
+  width: 100%;
+  overflow: auto;
+}
+.content .item{
+  height: 100%;
+  width: 100%;
+}
+.ul{
+  position: relative;
+  height:100%;
+  overflow-y: auto;
+}
+.li {
+  border-top:5px solid #EFEFEF;
+  position: relative;
+  width:100%;
+  margin: 10px 0;
+}
+.li .top-half{
+  position: relative;
+  width:100%;
+  height:40px;
+  line-height: 40px;
+}
+.li .top-half .head-img{
+  position: absolute;
+  left:10px;
+  margin:5px;
+  border-radius: 15px;
+  height:30px;
+  width:30px;
+}
+.li .top-half .name{
+  position: absolute;
+  left:50px;
+}
+.li .top-half .unit-price{
+  position: absolute;
+  right:20px;
+}
+.li .middle-half{
+  border-top: 1px solid #EFEFEF;  
+  position: relative;
+  width:100%;
+  height:80px;
+}
+.li .middle-half image{
+  position: relative;
+  left:10px;
+  height:70px;
+  width:70px;
+  margin: 5px;
+}
+.li .middle-half .name{
+  position:absolute;
+  top:10px;
+  left:100px;
+}
+.li .middle-half .price{
+  position:absolute;
+  bottom:10px;
+  left:100px;
+}
+.li .bottom-half{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row; 
+  position: relative;
+  border-top: 1px solid #EFEFEF;
+  width:100%;
+  height: 40px;
+  line-height: 40px;
+}
+.li .bottom-half .left{
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  font-size: 14px;
+  left:10px;
+  width: 30%;
+}
+.li .bottom-half .right{
+  top:5px;
+  right:20px;
+  height:30px;
+  line-height: 30px;
+  width:80px;
+  color:#019F01;
+  border:1px solid #019F01;
+}
+.li .bottom-half .right2{
+  top:5px;
+  right:20px;
+  height:30px;
+  line-height: 30px;
+  width:80px;
+}

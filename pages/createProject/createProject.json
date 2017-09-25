@@ -1,0 +1,39 @@
+{
+  "products":[
+    {
+      "name": "Apple iPhone 7 128G",
+      "iamge": "https://img14.360buyimg.com/n1/s546x546_jfs/t4642/110/753072126/121222/5556881f/58d484a0N1d9d2ebf.jpg",
+      "price": 5799
+    },
+    {
+      "name": "小米6 6GB+64GB",
+      "iamge": "https://img14.360buyimg.com/n1/s546x546_jfs/t5215/252/15502760/100416/cb06f1da/58f709adN45511018.jpg",
+      "price": 2799
+    },
+    {
+      "name": "小米 红米Note4X 全网通版 3GB+32GB",
+      "iamge": "https://img14.360buyimg.com/n0/jfs/t6361/18/1453135886/155619/cb739479/59521207N35ae90e3.jpg",
+      "price": 999
+    },
+    {
+      "name": "Amazfit 智能运动手表",
+      "iamge": "https://img14.360buyimg.com/n1/s546x546_jfs/t3142/161/3042379786/208522/da551e8f/57eb6cdaNd394e474.jpg",
+      "price": 749
+    },
+    {
+      "name": "bong 4 智能手环",
+      "iamge": "https://img14.360buyimg.com/n0/jfs/t5149/228/1456845066/145923/261f3faf/59104a45N73b3d773.jpg",
+      "price": 199
+    },
+    {
+      "name": "App Store 充值卡 100元",
+      "iamge": "https://img14.360buyimg.com/n0/jfs/t3094/138/5574117710/267723/ab604ad7/5875cb37N20759aa0.jpg",
+      "price": 100
+    },
+    {
+      "name": "全国移动流量充值卡 1000M",
+      "iamge": "https://img11.360buyimg.com/n1/jfs/t3112/57/3049397404/56535/1480f9d2/57eb7cd3Ncc883cc1.png",
+      "price": "39.90"
+    }
+  ]
+}

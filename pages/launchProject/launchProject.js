@@ -1,4 +1,5 @@
-var progressList = []
+//index.js
+var allProject = []
 for (var i = 0; i < 10; i++) {
   var o = {};
   o.id = i;
@@ -6,56 +7,61 @@ for (var i = 0; i < 10; i++) {
   o.price = 3000;
   o.totalCopies = 3200;
   o.currentCopies = 3199;
+  o.awardNumber = 456;
   o.image = 'http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
   o.avatarUrl = '';
+  if (i % 2 === 0) {
+    o.isEnd = false;
+  } else {
+    o.isEnd = true;
+  }
   o.nickName = '';
   o.unitPrice = 1;
-  progressList.push(o);
+  allProject.push(o);
 }
-var awardList = []
+var waitingList = []
 for (var i = 0; i < 2; i++) {
   var o = {};
   o.id = i;
   o.name = '小米4';
   o.price = 3000;
+  o.totalCopies = 3200;
+  o.currentCopies = 3199;
   o.awardNumber = 456;
-  if(i%2===0){
-    o.isAward=true;
-  }else{
-    o.isAward = false;
-  }
   o.image = 'http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
   o.avatarUrl = '';
   o.nickName = '';
   o.unitPrice = 1;
-  awardList.push(o);
+  waitingList.push(o);
 }
 
-var noAwardList = []
+var endList = []
 for (var i = 0; i < 2; i++) {
   var o = {};
   o.id = i;
   o.name = '小米4';
   o.price = 3000;
+  o.totalCopies = 3200;
+  o.currentCopies = 3199;
   o.awardNumber = 456;
   o.image = 'http://f10.baidu.com/it/u=3967905364,1965626044&fm=72';
   o.avatarUrl = '';
   o.nickName = '';
   o.unitPrice = 1;
-  noAwardList.push(o);
+  endList.push(o);
 }
 
 var menus = [{
   id: 0,
-  name: '进行中',
+  name: '全部',
   isSelected: false
 }, {
   id: 1,
-  name: '中奖啦',
+  name: '进行中',
   isSelected: false
 }, {
   id: 2,
-  name: '未中奖',
+  name: '已结束',
   isSelected: false
 }];
 
@@ -65,9 +71,8 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    progressList: progressList,
-    awardList: awardList,
-    noAwardList: noAwardList,
+    allProject: allProject,
+    waitingList: waitingList,
     currentIndex: 0,
     menus: menus
   },
@@ -102,18 +107,18 @@ Page({
   toBuy: function (e) {
     var id = e.currentTarget.dataset.id;
     wx.showToast({
-      title: '购买失败'+id,
+      title: '购买失败' + id,
       icon: id
     });
   },
-  toAward:function(e){
+  toAward: function (e) {
     var id = e.currentTarget.dataset.id;
     wx.showToast({
-      title: '去领奖'+id,
+      title: '去领奖' + id,
       icon: id
     });
   },
-  toCheck:function (e) {
+  toCheck: function (e) {
     var id = e.currentTarget.dataset.id;
     wx.showToast({
       title: '去查看' + id,
@@ -126,31 +131,31 @@ Page({
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {
 
-      var progressListTemp = progressList.map(function (item) {
+      var allProjectTemp = allProject.map(function (item) {
         var temp = item;
         item.avatarUrl = userInfo.avatarUrl;
         item.nickName = userInfo.nickName;
         return item;
       })
-      var awardListTemp = awardList.map(function (item) {
+      var waitingListTemp = waitingList.map(function (item) {
         var temp = item;
         item.avatarUrl = userInfo.avatarUrl;
         item.nickName = userInfo.nickName;
         return item;
       })
-      var noAwardListTemp = noAwardList.map(function (item) {
+      var endListTemp = endList.map(function (item) {
         var temp = item;
         item.avatarUrl = userInfo.avatarUrl;
         item.nickName = userInfo.nickName;
         return item;
       })
-      
+
       //更新数据
       that.setData({
         userInfo: userInfo,
-        progressList: progressListTemp,
-        awardList: awardListTemp,
-        noAwardList: noAwardListTemp
+        allProject: allProjectTemp,
+        waitingList: waitingListTemp,
+        endList: endListTemp
       })
       console.log(userInfo);
     })

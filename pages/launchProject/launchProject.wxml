@@ -1,0 +1,77 @@
+<view class="head">
+  <view class="head-item" wx:for="{{menus}}" wx:key="id"  data-id="{{item.id}}" bindtap="toggleMenu">
+    <span>{{item.name}}</span>
+    <view class="mark" wx:if="{{item.id==currentIndex}}"></view>
+  </view>
+</view>
+<swiper indicator-dots="{{false}}" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
+  <swiper-item>
+    <view class="ul" scroll-y="true">
+      <view class="li" wx:for="{{allProject}}" wx:key="id">
+        <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half" data-id="{{item.id}}" catchtap="toDetailPage">
+          <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half" wx:if="{{!item.isEnd}}">
+          <text class="left">剩余：{{item.totalCopies-item.currentCopies}}份</text>
+          <text class="left">我：{{item.totalCopies-item.currentCopies}}份</text>          
+          <button class="right"  data-id="{{item.id}}" catchtap="toBuy">购买</button>
+        </view>
+        <view class="bottom-half" wx:if="{{item.isEnd}}">
+          <text class="left">中奖号码：{{item.awardNumber}}</text>
+          <text class="left">预计利润：{{item.totalCopies-item.price}}元</text>          
+          <button class="right" data-id="{{item.id}}" catchtap="toCheck">查看</button>          
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view class="ul" scroll-y="true">
+      <view class="li" wx:for="{{waitingList}}" wx:key="id">
+        <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half" data-id="{{item.id}}" catchtap="toDetailPage">
+        <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half">
+          <text class="left">剩余：{{item.totalCopies-item.currentCopies}}份</text>
+          <text class="left">我：{{item.totalCopies-item.currentCopies}}份</text>          
+          <button class="right"  data-id="{{item.id}}" catchtap="toBuy">购买</button>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+      <view class="ul" scroll-y="true">
+      <view class="li" wx:for="{{endList}}" wx:key="id">
+        <view class="top-half">
+          <image class="head-img" src="{{item.avatarUrl}}"></image>
+          <text class="name">{{item.nickName}}</text>
+          <text class="unit-price">{{item.unitPrice}}元/份</text>
+        </view>
+        <view class="middle-half" data-id="{{item.id}}" catchtap="toDetailPage">
+        <image src="{{item.image}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">京东零售价：{{item.price}}元</text>
+        </view>
+        <view class="bottom-half">
+          <text class="left">中奖号码：{{item.awardNumber}}</text>
+          <text class="left">预计利润：{{item.totalCopies-item.price}}元</text>          
+          <button class="right" data-id="{{item.id}}" catchtap="toCheck">查看</button>          
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+

@@ -5,7 +5,7 @@
     <view class="head">object的家</view>
     <view class="content">
       <view class="item">
-        <image src="{{userInfo.avatarUrl}}" class="info"></image>
+        <image src="{{userInfo.avatarUrl}}" class="info head-img"></image>
         <view class="title">头像</view>        
       </view>
       <view class="item"></view>
@@ -28,11 +28,15 @@
   <view class="menu">
     <view class="head">我发起的梦想项目</view>
     <view class="content">
-      <view class="item">
+      <view class="item" catchtap="toCreateProject">
+        <image src="../images/add.png" class="info inner-img"></image>
+        <view class="title">发起项目</view>        
+      </view>
+      <view class="item" catchtap="toLaunchProject">
         <view class="info">1个</view> 
         <view class="title">进行中</view>        
       </view>
-      <view class="item">
+      <view class="item" catchtap="toLaunchProject">
         <view class="info">2个</view> 
         <view class="title">已结束</view>        
       </view>

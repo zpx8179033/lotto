@@ -1,0 +1,60 @@
+<!--createProject.wxml-->
+<view class="header">
+  {{title}}
+</view>
+<swiper indicator-dots="{{false}}" class="content" current="{{currentIndex}}" bindchange="toggleMenu">
+  <swiper-item>
+    <view class="item" wx:for="{{products}}" wx:key="id" data-id="{{item.id}}" catchtap="selectOne">
+      <image src="{{item.image}}"></image>
+      <view class="divide-line"></view>
+      <view class="middle">{{item.name}}</view>
+      <view class="divide-line"></view>
+      <view wx:if="{{!item.isSelected}}" class="right">￥{{item.price}}</view>
+      <view wx:if="{{item.isSelected}}" class="selected-right">￥{{item.price}}</view>
+    </view>
+    <view class="bottom" catchtap="toSecondStep">下一步</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="default-info">
+      <view class="item-info">
+        <view class="left">出售链接</view>
+        <view class="right">官方指定</view>
+      </view>
+      <view class="item-info">
+        <view class="left">出售平台</view>
+        <view class="right">京东</view>
+      </view>
+      <view class="item-info">
+        <view class="left">详细链接</view>
+        <view data-url="{{selectedProduct.url}}" catchlongtap="copyProductUrl" class="right">{{selectedProduct.name}}</view>
+      </view>
+      <view class="item-info">
+        <view class="left">价格</view>
+        <view class="right">{{selectedProduct.price}}</view>
+      </view>
+    </view>
+    <view class="default-info">
+      <view class="item-info">
+        <view class="left">切分梦想</view>
+        <view class="right"></view>
+      </view>
+      <view class="item-info">
+        <view class="left">份数</view>
+        <view class="right">
+          <input type="number" bindinput="inputCopiesChanged" value="{{productProperty.copies}}"></input>份
+        </view>
+      </view>
+      <view class="item-info">
+        <view class="left">单份售价</view>
+        <view class="right">
+          <view class="text">￥</view><input type="number" bindinput="inputUnitPriceChanged" value="{{productProperty.unitPrice}}"></input><view class="text">元</view>
+        </view>
+      </view>
+      <view class="item-info">
+        <view class="left">利润</view>
+        <view class="right {{submitDisplay}}-alert">￥{{productProperty.copies*productProperty.unitPrice-selectedProduct.price}}=￥{{productProperty.copies*productProperty.unitPrice}}-￥{{selectedProduct.price}}</view>
+      </view>
+    </view>
+    <button class="btn-base {{submitDisplay}}-btn" disabled="{{!submitDisplay}}">提交发布</button>
+  </swiper-item>
+</swiper>  
